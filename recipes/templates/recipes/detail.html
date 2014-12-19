@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} - {{ object.title }}{% endblock %}
+
+{% block content %}
+<h2>{{ object.title }}</h2>
+<p>{{ object.number_of_portions }} portions.</p>
+<h3>Indigrents</h3>
+{{ object.ingredients|linebreaks }}
+<h3>Preparation</h3>
+{{ object.preparation|linebreaks }}
+<p>Preparation time: {{ object.time_for_preparation }} minutes</p>
+{% endblock %}
